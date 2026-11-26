@@ -11,10 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestControllerAdvice
-public class ManejadorExcepcionesGlobal extends RuntimeException {
-    public ManejadorExcepcionesGlobal(String message) {
-        super(message);
-    }
+public class ManejadorExcepcionesGlobal {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, Object>> manejarValidaciones(MethodArgumentNotValidException ex) {

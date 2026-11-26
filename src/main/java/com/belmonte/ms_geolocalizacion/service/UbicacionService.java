@@ -22,7 +22,7 @@ public class UbicacionService {
     private static final double RADIO_TIERRA_KM = 6371.0;
 
     public void actualizarUbicacion(ActualizacionUbicacionDTO dto) {
-        UbicacionConductor ubicacion = ubicacionRepository.findByConductorId(dto.getIdConductor())
+        UbicacionConductor ubicacion = ubicacionRepository.findByIdConductor(dto.getIdConductor())
                 .orElseGet(() -> UbicacionConductor.builder()
                         .idConductor(dto.getIdConductor())
                         .build());

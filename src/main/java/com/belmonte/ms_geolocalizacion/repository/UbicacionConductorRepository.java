@@ -9,6 +9,7 @@ import java.util.Optional;
 @Repository
 public interface UbicacionConductorRepository extends JpaRepository<UbicacionConductor, Long> {
 
-    Optional<UbicacionConductor> findByConductorId(Long idConductor);
+    //el nombre debe coincidir con el atributo idConductor de UbicacionConductor
+    Optional<UbicacionConductor> findByIdConductor(Long idConductor);
 
 }
